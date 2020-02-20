@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paint</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<body ng-controller="mainCtrl">
+    <div ng-include="'views/header.html'"></div>
+
+    <div class="container-fluid">
+        <nav>
+            <div class="container">
+                <div class="row  justify-content-center align-items-center">
+                    <div class="col-md-12 text-center">
+                        <div class="nav-button">
+                            <div class="col-md-3">lorem</div>
+                            <div class="col-md-3">lorem</div>
+                            <div class="col-md-3">lorem</div>
+                            <div class="col-md-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae sed voluptatum qui sunt sint culpa asperiores at. Cumque architecto porro corporis nulla ab sunt error voluptatum? Culpa non facere ducimus!</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="section">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="row">
+                            <div class="btn btn-outline-info menu-button " onclick="is_draw = true"><a href="#">Lapiz</a>
+                            </div>
+                            <div class="btn btn-outline-info menu-button" onclick="color='#fff'"><a href="#">Goma</a></div>
+                            <div class="btn btn-outline-info menu-button"><a href="#">Rect</a></div>
+                            <div class="btn btn-outline-info menu-button"><a href="#">Balde</a></div>
+                            <div class="btn btn-outline-info menu-button"><a href="#">text</a></div>
+                            <div class="btn btn-outline-info menu-button"><a href="">
+                                    <input type="color"  id="pallet" onchange=""></a></div>
+                            <div class="btn btn-outline-info menu-button"><a href="#">lupa</a></div>
+                            <div class="btn btn-outline-info menu-button"><a href="#">click</a></div>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <canvas width="1000" height="500" id="io"></canvas>
+                    </div>
+                    <div class="col-md-2">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, quos dolore quasi
+                        perspiciatis ullam, nesciunt, est doloremque nulla a reiciendis quisquam dolores illum modi
+                        porro expedita. Odio facere incidunt expedita.
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit doloremque quisquam libero
+                        repudiandae. Voluptatem molestiae minima aspernatur vero asperiores reprehenderit enim
+                        accusantium placeat. Debitis molestiae architecto possimus quo quod porro?
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
