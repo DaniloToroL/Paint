@@ -15,37 +15,75 @@
     <div ng-include="'views/header.html'"></div>
 
     <div class="container-fluid">
-        <nav>
-            <div class="container">
-                <div class="row  justify-content-center align-items-center">
-                    <div class="col-md-12 text-center">
-                        <div class="nav-button">
-                            <a class="btn  btn-outline-primary" href="#">New</a>
-                            <a class="btn  btn-outline-primary" href="#">Open</a>
-                            <a class="btn  btn-outline-primary" href="#">Save</a>
-                            <a class="btn  btn-outline-primary" href="#">Undo</a>
+        <nav class="row">
+            <div class="btn btn-sm">Archivo</div>
+            <div class="btn btn-sm">Inicio</div>
+            <div class="btn btn-sm">Ver</div>
+        </nav>
+        <div class="row menu">
+            <div class="col">
+                <div><img
+                        src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA1MTIuMDAxIDUxMi4wMDEiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMi4wMDEgNTEyLjAwMTsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSI1MTJweCIgaGVpZ2h0PSI1MTJweCI+CjxwYXRoIHN0eWxlPSJmaWxsOiNCRDY0Mjg7IiBkPSJNMTEyLDY0LjAwMWgyODhjMTcuNjcyLDAsMzIsMTQuMzI4LDMyLDMydjM4NGMwLDE3LjY3Mi0xNC4zMjgsMzItMzIsMzJIMTEyICBjLTE3LjY3MiwwLTMyLTE0LjMyOC0zMi0zMnYtMzg0QzgwLDc4LjMyOSw5NC4zMjgsNjQuMDAxLDExMiw2NC4wMDF6Ii8+CjxwYXRoIHN0eWxlPSJmaWxsOiNGNUY2RjY7IiBkPSJNMTIwLDQ4MC4wMDFjLTQuNDE2LDAtOC0zLjU4NC04LTh2LTM2OGMwLTQuNDE2LDMuNTg0LTgsOC04aDI3MmM0LjQxNiwwLDgsMy41ODQsOCw4djI4OGwtODgsODhIMTIwICB6Ii8+CjxwYXRoIHN0eWxlPSJmaWxsOiNBMzU2MjM7IiBkPSJNMTc2LDk2LjAwMWgtMTZ2LTE2YzAtOC44NCw3LjE2LTE2LDE2LTE2bDAsMFY5Ni4wMDF6Ii8+CjxwYXRoIHN0eWxlPSJmaWxsOiM5QkE3QUY7IiBkPSJNMjEyLDIyNC4wMDFoMTM2YzYuNjI0LDAsMTIsNS4zNzYsMTIsMTJsMCwwYzAsNi42MjQtNS4zNzYsMTItMTIsMTJIMjEyYy02LjYyNCwwLTEyLTUuMzc2LTEyLTEyICBsMCwwQzIwMCwyMjkuMzc3LDIwNS4zNzYsMjI0LjAwMSwyMTIsMjI0LjAwMXoiLz4KPHBhdGggc3R5bGU9ImZpbGw6I0NFQ0VDRTsiIGQ9Ik00MDAsMzkyLjAwMWgtODBjLTQuNDE2LDAtOCwzLjU4NC04LDh2ODBMNDAwLDM5Mi4wMDF6Ii8+CjxwYXRoIHN0eWxlPSJmaWxsOiNEMTdGNEQ7IiBkPSJNODgsODguMDAxTDg4LDg4LjAwMWM0LjQxNiwwLDgsMy41ODQsOCw4djI2NGMwLDQuNDE2LTMuNTg0LDgtOCw4bDAsMGMtNC40MTYsMC04LTMuNTg0LTgtOHYtMjY0ICBDODAsOTEuNTg1LDgzLjU4NCw4OC4wMDEsODgsODguMDAxeiIvPgo8Zz4KCTxwYXRoIHN0eWxlPSJmaWxsOiNFOUU5RTk7IiBkPSJNMzA0LDQwOC4wMDF2MTZjMCw0LjQxNi0zLjU4NCw4LTgsOGwwLDBjLTQuNDE2LDAtOCwzLjU4NC04LDhzLTMuNTg0LDgtOCw4aC04ICAgYy00LjQxNiwwLTgsMy41ODQtOCw4cy0zLjU4NCw4LTgsOEgxMTJ2OGMwLDQuNDE2LDMuNTg0LDgsOCw4aDE5MnYtODBDMzA3LjU4NCw0MDAuMDAxLDMwNCw0MDMuNTg1LDMwNCw0MDguMDAxeiIvPgoJPHBhdGggc3R5bGU9ImZpbGw6I0U5RTlFOTsiIGQ9Ik0zOTIsOTYuMDAxSDE2MGMwLjEyOCwyLjQsMC4xMjgsNC44LDAsNy4yYy0wLjQ0LDguODI0LDYuMzUyLDE2LjMzNiwxNS4xNzYsMTYuNzc2ICAgYzAuMjgsMC4wMTYsMC41NTIsMC4wMjQsMC44MjQsMC4wMjRoMTkyYzguODQsMCwxNiw3LjE2LDE2LDE2djI0bDAsMGMwLDguODQsNy4xNiwxNiwxNiwxNmwwLDB2LTcyICAgQzQwMCw5OS41ODUsMzk2LjQxNiw5Ni4wMDEsMzkyLDk2LjAwMXoiLz4KPC9nPgo8cGF0aCBzdHlsZT0iZmlsbDojOUJBN0FGOyIgZD0iTTMwOC43Miw0NS4xMjFjLTYuOTYtMi44NzItMTIuMjMyLTguNzYtMTQuMzItMTZjLTYuMTg0LTIxLjIwOC0yOC4zOTItMzMuMzg0LTQ5LjYtMjcuMiAgYy0xMy4xMiwzLjgyNC0yMy4zNzYsMTQuMDgtMjcuMiwyNy4yYy0yLjA4OCw3LjI0LTcuMzYsMTMuMTI4LTE0LjMyLDE2bC0xNy4yLDYuODhjLTYuMDY0LDIuNDE2LTEwLjA1Niw4LjI3Mi0xMC4wOCwxNC44djI5LjIgIGMwLDguODQsNy4xNiwxNiwxNiwxNmgxMjhjOC44NCwwLDE2LTcuMTYsMTYtMTZ2LTI5LjJjLTAuMDI0LTYuNTI4LTQuMDE2LTEyLjM4NC0xMC4wOC0xNC44TDMwOC43Miw0NS4xMjF6IE0yNTYsNTYuMDAxICBjLTguODQsMC0xNi03LjE2LTE2LTE2czcuMTYtMTYsMTYtMTZjOC44NCwwLDE2LDcuMTYsMTYsMTZTMjY0Ljg0LDU2LjAwMSwyNTYsNTYuMDAxeiIvPgo8cGF0aCBzdHlsZT0iZmlsbDojNzI4MThCOyIgZD0iTTMxMiw2NC4wMDFjLTQuNDE2LDAtOCwzLjU4NC04LDhsMCwwYzAsNC40MTYtMy41ODQsOC04LDhoLTE2Yy00LjQxNiwwLTgsMy41ODQtOCw4bDAsMCAgYzAsNC40MTYtMy41ODQsOC04LDhoLTg4YzAsOC44NCw3LjE2LDE2LDE2LDE2aDEyOGM4Ljg0LDAsMTYtNy4xNiwxNi0xNnYtMzJIMzEyeiIvPgo8cGF0aCBzdHlsZT0iZmlsbDojQUZCQUJGOyIgZD0iTTIyNS4wNCw0MC4wMDFjLTQuNDE2LDAuMTQ0LTguMTEyLTMuMzI4LTguMjQ4LTcuNzQ0Yy0wLjAyNC0wLjc2LDAuMDY0LTEuNTIsMC4yNDgtMi4yNTYgIGM0LjU4NC0xNy43NDQsMjAuNjMyLTMwLjEwNCwzOC45Ni0zMGM0LjQxNiwwLDgsMy41ODQsOCw4cy0zLjU4NCw4LTgsOGMtMTAuOTYtMC4wMTYtMjAuNTQ0LDcuMzkyLTIzLjI4LDE4ICBDMjMxLjgxNiwzNy41MTMsMjI4LjY2NCwzOS45NjksMjI1LjA0LDQwLjAwMXoiLz4KPHBhdGggc3R5bGU9ImZpbGw6I0EzNTYyMzsiIGQ9Ik00MDAsODAuMDAxaC0zMmMtOC44NCwwLTE2LTcuMTYtMTYtMTZoLTE2djMyaDU2YzQuNDE2LDAsOCwzLjU4NCw4LDh2Mjg4bC04OCw4OEgxMjAgIGMwLDguODQsNy4xNiwxNiwxNiwxNmgxOTQuNzJjOC40ODgsMC4wMDgsMTYuNjMyLTMuMzYsMjIuNjQtOS4zNmw1My4yOC01My4yOGM2LTYuMDA4LDkuMzY4LTE0LjE1Miw5LjM2LTIyLjY0Vjk2LjAwMSAgQzQxNiw4Ny4xNjksNDA4Ljg0LDgwLjAwMSw0MDAsODAuMDAxeiIvPgo8Y2lyY2xlIHN0eWxlPSJmaWxsOiNFRTJDMzk7IiBjeD0iMTY0IiBjeT0iMjM2LjAwMSIgcj0iMTIiLz4KPHBhdGggc3R5bGU9ImZpbGw6IzlCQTdBRjsiIGQ9Ik0yMTIsMTc2LjAwMWgxMzZjNi42MjQsMCwxMiw1LjM3NiwxMiwxMmwwLDBjMCw2LjYyNC01LjM3NiwxMi0xMiwxMkgyMTJjLTYuNjI0LDAtMTItNS4zNzYtMTItMTIgIGwwLDBDMjAwLDE4MS4zNzcsMjA1LjM3NiwxNzYuMDAxLDIxMiwxNzYuMDAxeiIvPgo8Y2lyY2xlIHN0eWxlPSJmaWxsOiNFRTJDMzk7IiBjeD0iMTY0IiBjeT0iMTg4LjAwMSIgcj0iMTIiLz4KPHBhdGggc3R5bGU9ImZpbGw6IzlCQTdBRjsiIGQ9Ik0yMTIsMjcyLjAwMWgxMzZjNi42MjQsMCwxMiw1LjM3NiwxMiwxMmwwLDBjMCw2LjYyNC01LjM3NiwxMi0xMiwxMkgyMTJjLTYuNjI0LDAtMTItNS4zNzYtMTItMTIgIGwwLDBDMjAwLDI3Ny4zNzcsMjA1LjM3NiwyNzIuMDAxLDIxMiwyNzIuMDAxeiIvPgo8Y2lyY2xlIHN0eWxlPSJmaWxsOiNFRTJDMzk7IiBjeD0iMTY0IiBjeT0iMjg0LjAwMSIgcj0iMTIiLz4KPHBhdGggc3R5bGU9ImZpbGw6IzlCQTdBRjsiIGQ9Ik0yMTIsMzIwLjAwMWgxMzZjNi42MjQsMCwxMiw1LjM3NiwxMiwxMmwwLDBjMCw2LjYyNC01LjM3NiwxMi0xMiwxMkgyMTJjLTYuNjI0LDAtMTItNS4zNzYtMTItMTIgIGwwLDBDMjAwLDMyNS4zNzcsMjA1LjM3NiwzMjAuMDAxLDIxMiwzMjAuMDAxeiIvPgo8Y2lyY2xlIHN0eWxlPSJmaWxsOiNFRTJDMzk7IiBjeD0iMTY0IiBjeT0iMzMyLjAwMSIgcj0iMTIiLz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==" />
+                </div><small>Portapapeles</small>
+            </div>
+            <div class="col-2"><small>Imagen</small></div>
+            <div class="col"><small>Herramientas</small></div>
+            <div class="col"><small>Img</small></div>
+            <div class="col-2"><small>Formas</small></div>
+            <div class="col"><small>Size</small></div>
+            <div class="col-4">
+                <div class="row justify-content-center">
+                    <div class="col-2">
+                        <div id="bg-color-1"></div>
+                        <small>Color1</small>
+                    </div>
+                    <div class="col-2">
+                        <div id="bg-color-2"></div>
+                        <small>Color2</small>
+                    </div>
+                    <div class="col-6" id="colorPallet">
+                        <div class="row">
+                            <div class="col-1 bg-color"></div>
+                            <div class="col-1 bg-color"></div>
+                            <div class="col-1 bg-color"></div>
+                            <div class="col-1 bg-color"></div>
+                            <div class="col-1 bg-color"></div>
+                            <div class="col-1 bg-color"></div>
+                            <div class="col-1 bg-color"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-1 bg-color"></div>
+                            <div class="col-1 bg-color"></div>
+                            <div class="col-1 bg-color"></div>
+                            <div class="col-1 bg-color"></div>
+                            <div class="col-1 bg-color"></div>
+                            <div class="col-1 bg-color"></div>
+                            <div class="col-1 bg-color"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-1 bg-color"></div>
+                            <div class="col-1 bg-color"></div>
+                            <div class="col-1 bg-color"></div>
+                            <div class="col-1 bg-color"></div>
+                            <div class="col-1 bg-color"></div>
+                            <div class="col-1 bg-color"></div>
+                            <div class="col-1 bg-color"></div>
                         </div>
                     </div>
                 </div>
+                <div class="row justify-content-center">
+                    <small>Colors</small>
+                </div>
+
             </div>
-        </nav>
+            <div class="col"><small>Tools</small></div>
+        </div>
+
         <div class="section">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-2 col-lg-1">
-                        <div class="row">
-                            <div class="btn btn-outline-info menu-button " onclick="lapiz = true"><a href="#">Lapiz</a>
-                            </div>
-                            <div class="btn btn-outline-info menu-button" onclick="color='#fff'"><a href="#">Goma</a></div>
-                            <div class="btn btn-outline-info menu-button"><a href="#">Rect</a></div>
-                            <div class="btn btn-outline-info menu-button"><a href="#">Balde</a></div>
-                            <div class="btn btn-outline-info menu-button"><a href="#">text</a></div>
-                            <div class="btn btn-outline-info menu-button"><a href="">
-                                    <input type="color"  id="pallet" ></a></div>
-                            <div class="btn btn-outline-info menu-button"><a href="#">lupa</a></div>
-                            <div class="btn btn-outline-info menu-button"><a href="#">click</a></div>
-                            <input type="range"  id="slider" value="5" step="1" max="36" min="5">
-                        </div>
+                        
                     </div>
                     <div class="col-md-8 col-lg-9">
                         <canvas width="1000" height="500" id="io"></canvas>

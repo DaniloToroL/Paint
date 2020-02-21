@@ -7,11 +7,13 @@ let y_i
 let color = 'black'
 let size = 1
 
+
 // HTML Objects
 const pallet = document.getElementById('pallet')
 const slider = document.querySelector('#slider')
 const canvas = document.getElementById('io')
 const lienzo = canvas.getContext('2d')
+const colorsRandom = document.getElementsByClassName('bg-color')
 
 // Listener
 pallet.addEventListener('change', changeColor)
@@ -20,7 +22,24 @@ canvas.addEventListener('mousedown', startDraw)
 canvas.addEventListener('mouseup',endDraw)
 canvas.addEventListener('mousemove', moving)
 
+for(color in colorsRandom){
+   if(colorsRandom[color].style != undefined){
+        colorsRandom[color].style.backgroundColor = getRandomColor()
+   }
+}
+
+
 // Functions
+
+function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+
 function changeColor(event){
         color = event.target.value
 }
