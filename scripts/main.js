@@ -9,15 +9,11 @@ let size = 1
 
 
 // HTML Objects
-const pallet = document.getElementById('pallet')
-const slider = document.querySelector('#slider')
 const canvas = document.getElementById('io')
 const lienzo = canvas.getContext('2d')
 const colorsRandom = document.getElementsByClassName('bg-color')
 
 // Listener
-pallet.addEventListener('change', changeColor)
-slider.addEventListener('change', changeSize)
 canvas.addEventListener('mousedown', startDraw)
 canvas.addEventListener('mouseup',endDraw)
 canvas.addEventListener('mousemove', moving)
