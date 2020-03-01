@@ -19,14 +19,14 @@ Table OF Contents
 ===========================================================*/
 
 /*----------------------------*\
-	Images
+	General
 \*----------------------------*/
-img {
-    max-width: 50px;
-}
-
 small{
     text-align: center;
+}
+
+canvas{
+    cursor: url('../img/square.png'), auto;	
 }
 
 
@@ -74,6 +74,29 @@ small{
 }
 
 /*----------------------------*\
+	icons
+\*----------------------------*/
+
+
+.main-icon img{
+    max-width: 40px;
+}
+
+.icon{
+    padding: 1px;
+    cursor: pointer;
+}
+
+.icon img{
+    max-width: 15px;
+}
+
+.size-color{
+    color: blue;
+    filter: opacity(50%);
+}
+
+/*----------------------------*\
 	Colors
 \*----------------------------*/
 .bg-color{
@@ -86,14 +109,12 @@ small{
 }
 
 #bg-color-1{
-    background-color: #000 !important;
     min-height: 40px;
     min-width: 30px;
 }
 
 
 #bg-color-2{
-    background-color: #FFF;
     min-height: 40px;
     min-width: 30px;
     border: 1px solid #000 ;
