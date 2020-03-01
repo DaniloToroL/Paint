@@ -15,8 +15,6 @@ Project to practice Javascript with canvas
 - Custom Cursor
 - Bootstrap
 
-Listeners
-
 ## Done
 
 - Write
