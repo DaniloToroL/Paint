@@ -14,58 +14,65 @@ Table OF Contents
 
 */
 
+
 /*=========================================================
 	01 -> GENERAL
 ===========================================================*/
 
+
 /*----------------------------*\
 	General
 \*----------------------------*/
-small{
+
+small {
     text-align: center;
 }
 
-canvas{
-    cursor: url('../img/square.png'), auto;	
+canvas {
+    cursor: url('../img/square.png'), auto;
 }
 
+input{
+    cursor: pointer;
+}
 
 
 /*=========================================================
 	02 -> HEADER
 ===========================================================*/
 
+
 /*----------------------------*\
 	Buttons
 \*----------------------------*/
 
-.nav-button{
+.nav-button {
     margin: 10px;
     padding: 10px;
     border-bottom: 1px slategray solid;
 }
 
-.nav-button > a{
+.nav-button>a {
     padding: 5px 10px;
-
 }
+
 
 /*=========================================================
 	03 -> MENU
 ===========================================================*/
 
+
 /*----------------------------*\
 	Buttons
 \*----------------------------*/
 
-.menu > div{
+.menu>div {
     min-height: 100px;
     border-right: 1px darkturquoise dotted;
     border-bottom: 2px gray solid;
-
 }
 
-.menu-button{
+.menu-button {
     /* padding: 5px 10px !important; */
     padding-left: auto;
     padding-right: auto;
@@ -73,49 +80,81 @@ canvas{
     /* display: block !important; */
 }
 
+#size {
+    -webkit-appearance: none;
+    width: 80%;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+#size:hover {
+    opacity: 1;
+}
+
+#size::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+}
+
+#size::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+#sizeVal {
+    width: 15%;
+    position: relative;
+    top: -8px;
+    text-align: center;
+}
+
 /*----------------------------*\
 	icons
 \*----------------------------*/
 
-
-.main-icon img{
+.main-icon img {
     max-width: 40px;
 }
 
-.icon{
+.icon {
     padding: 1px;
     cursor: pointer;
 }
 
-.icon img{
+.icon img {
     max-width: 15px;
 }
 
-.size-color{
+.size-color {
     color: blue;
     filter: opacity(50%);
 }
 
+
 /*----------------------------*\
 	Colors
 \*----------------------------*/
-.bg-color{
-    max-width: 20px !important;
-    min-height: 20px !important;
+
+input[type="color"] {
+    -webkit-appearance: none;
+    border: none;
+    width: 100%;
+    height: 100%;
 }
 
-#colorPallet{
-    margin-right: -10px;
+input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
 }
 
-#bg-color-1{
-    min-height: 40px;
-    min-width: 30px;
-}
-
-
-#bg-color-2{
-    min-height: 40px;
-    min-width: 30px;
-    border: 1px solid #000 ;
+input[type="color"]::-webkit-color-swatch {
+    border: none;
 }
